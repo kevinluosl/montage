@@ -16,3 +16,19 @@
     width:300px;
     padding:5px;
 }
+
+.WithDelegate .indicator
+{
+    display: inline-block;
+    width: 300px;
+    height: 18px;
+    background-color: white;
+}
+.WithDelegate--active
+{
+    background-color: lightgray;
+}
+.WithDelegate--active .indicator
+{
+background-color: green;
+}

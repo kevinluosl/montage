@@ -12,5 +12,27 @@ exports.WithDelegate = Component.specialize(/** @lends WithDelegate# */ {
         value: function WithDelegate() {
             this.super();
         }
+    },
+
+    status:{
+        value:undefined
+    },
+
+    shouldBeginEditing:{
+        value:function(){
+            return this.templateObjects.checkbox.checked;
+        }
+    },
+
+    didBeginEditing:{
+        value:function(){
+            this.status = "didBeginEditing";
+        }
+    },
+
+    didEndEditing:{
+        value:function(){
+            this.status = "didEndEditing";
+        }
     }
 });

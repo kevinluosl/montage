@@ -14,6 +14,36 @@
             "prototype": "montage/ui/text-field.reel",
             "properties": {
                 "element": {"#": "textField"}
+            },
+            "bindings": {
+                "delegate": {"<-": "@owner"}
+            }
+        },
+        "checkbox": {
+            "prototype": "montage/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked":true
+            }
+        },
+        "didBeginEditingRow": {
+            "prototype": "montage/ui/component",
+            "properties": {
+                "element": {"#": "didBeginEditingRow"},
+                "hasTemplate": false
+            },
+            "bindings": {
+                 "classList.has('WithDelegate--active')": {"<-": "@checkbox.checked && @owner.status == 'didBeginEditing'"}
+            }
+        },
+        "didEndEditingRow": {
+            "prototype": "montage/ui/component",
+            "properties": {
+                "element": {"#": "didEndEditingRow"},
+                "hasTemplate": false
+            },
+            "bindings": {
+                 "classList.has('WithDelegate--active')": {"<-": "@checkbox.checked && @owner.status == 'didEndEditing'"}
             }
         }
     }
@@ -24,6 +54,18 @@
         <div class="row">
             <label>Text Field:</label>
             <input data-montage-id="textField"/>
+        </div>
+        <div class="row">
+            <label>ShouldBegin Editing:</label>
+            <input data-montage-id="checkbox" type="checkbox"/>
+        </div>
+        <div data-montage-id="didBeginEditingRow" class="row indicator-list">
+            <label>didBeginEditing:</label>
+            <div class="indicator"></div>
+        </div>
+        <div data-montage-id="didEndEditingRow" class="row indicator-list">
+            <label>didEndEditing:</label>
+            <div class="indicator"></div>
         </div>
     </div>
 </body>
