@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+
+        "cases": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "cases"},
+                "isSelectionEnabled": true
+            },
+            "bindings": {
+                "content": {"<-": "@owner.configuration.cases"}
+            }
+        },
+
+        "case": {
+            "prototype": "montage/ui/component",
+            "properties": {
+                "element": {"#": "case"},
+                "hasTemplate": false
+            },
+            "bindings": {
+                "case": {"<-": "@cases:iteration.object"}
+            }
+        },
+
+        "caseLabel": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "case-label"}
+            },
+            "bindings": {
+                "value": {"<-": "@cases:iteration.object.label"}
+            }
+        },
+
+        "casesSubstitution": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "cases-substitution"}
+            },
+            "bindings": {
+                "switchValue": {"<-": "@cases.selection.0.arg"}
+            }
+        },
+
+        "simple": {
+            "prototype": "../simple.reel",
+            "properties": {
+                "element": {"#": "simple"}
+            },
+            "bindings": {
+                "configData": {"<-": "@cases.selection.0"}
+            }
+        },
+
+        "withDelegate": {
+            "prototype": "../with-delegate.reel",
+            "properties": {
+                "element": {"#": "with-delegate"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" class="MontageSample">
+        <nav data-montage-id="cases" class="MontageSample-cases">
+            <div data-montage-id="case" class="MontageSample-case">
+                <div data-montage-id="case-label" class="MontageSample-label"></div>
+            </div>
+        </nav>
+
+        <div data-montage-id="cases-substitution" class="MontageSample-substitution">
+            <div data-montage-id="simple" data-arg="simple"></div>
+            <div data-montage-id="with-delegate" data-arg="with-delegate"></div>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
