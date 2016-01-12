@@ -1,0 +1,22 @@
+{
+    "cases": [
+        {
+            "label": "hello world",
+            "arg": "hello-world",
+            "captions": [
+            ]
+        },
+        {
+            "label": "set text programmatically",
+            "arg": "set-text-programmatically",
+            "captions": [
+            ]
+        },
+        {
+            "label": "set text with a binding",
+            "arg": "set-text-with-a-binding",
+            "captions": [
+            ]
+        }
+    ]
+}

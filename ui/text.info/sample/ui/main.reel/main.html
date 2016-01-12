@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "main"}
+                }
+            },
+            "cases": {
+                "prototype": "montage/ui/repetition.reel",
+                "properties": {
+                    "element": {"#": "cases"},
+                    "isSelectionEnabled": true
+                },
+                "bindings": {
+                    "content": {"<-": "@owner.configuration.cases"}
+                }
+            },
+            "case": {
+                "prototype": "montage/ui/component",
+                "properties": {
+                    "element": {"#": "case"},
+                    "hasTemplate": false
+                },
+                "bindings": {
+                    "case": {"<-": "@cases:iteration.object"}
+                }
+            },
+            "caseLabel": {
+                "prototype": "montage/ui/text.reel",
+                "properties": {
+                    "element": {"#": "case-label"}
+                },
+                "bindings": {
+                    "value": {"<-": "@cases:iteration.object.label"}
+                }
+            },
+            "casesSubstitution": {
+                "prototype": "montage/ui/substitution.reel",
+                "properties": {
+                    "element": {"#": "cases-substitution"}
+                },
+                "bindings": {
+                    "switchValue": {"<-": "@cases.selection.0.arg"}
+                }
+            },
+            "helloWorld": {
+                "prototype": "../hello-world.reel",
+                "properties": {
+                    "element": {"#": "hello-world"}
+                }
+            },
+            "setTextProgrammatically": {
+                "prototype": "../set-text-programmatically.reel",
+                "properties": {
+                    "element": {"#": "set-text-programmatically"}
+                }
+            },
+            "setTextWithABinding": {
+                "prototype": "../set-text-with-a-binding.reel",
+                "properties": {
+                    "element": {"#": "set-text-with-a-binding"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" class="Main">
+        <nav data-montage-id="cases" class="Main-cases">
+            <div data-montage-id="case" class="Main-case">
+                <div data-montage-id="case-label" class="MainCase-label"></div>
+            </div>
+        </nav>
+        <div data-montage-id="cases-substitution" class="Main-substitution">
+            <div data-montage-id="hello-world" data-arg="hello-world"></div>
+            <div data-montage-id="set-text-programmatically" data-arg="set-text-programmatically"></div>
+            <div data-montage-id="set-text-with-a-binding" data-arg="set-text-with-a-binding"></div>
+        </div>
+    </div>
+</body>
+</html>
