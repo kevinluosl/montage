@@ -1,18 +1,25 @@
 .WithDelegate {
 
 }
-.WithDelegate .indicator
+.WithDelegate-indicator
 {
     display: inline-block;
     width: 300px;
     height: 18px;
     background-color: white;
 }
-.WithDelegate--active
+.WithDelegate--indicatorActive
 {
     background-color: lightgray;
 }
-.WithDelegate--active .indicator
+.WithDelegate--indicatorActive .WithDelegate-indicator
 {
-background-color: green;
+    background-color: green;
+    animation-name: withDelegate_indicatorActive;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+}
+@keyframes withDelegate_indicatorActive{
+    from{width: 0px; }
+    to{width: 300px; }
 }

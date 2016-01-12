@@ -33,7 +33,7 @@
                 "hasTemplate": false
             },
             "bindings": {
-                 "classList.has('WithDelegate--active')": {"<-": "@checkbox.checked && @owner.status == 'didBeginEditing'"}
+                 "classList.has('WithDelegate--indicatorActive')": {"<-": "@checkbox.checked && @owner.status == 'didBeginEditing'"}
             }
         },
         "didEndEditingRow": {
@@ -43,7 +43,7 @@
                 "hasTemplate": false
             },
             "bindings": {
-                 "classList.has('WithDelegate--active')": {"<-": "@checkbox.checked && @owner.status == 'didEndEditing'"}
+                 "classList.has('WithDelegate--indicatorActive')": {"<-": "@checkbox.checked && @owner.status == 'didEndEditing'"}
             }
         }
     }
@@ -56,16 +56,16 @@
             <input data-montage-id="textField"/>
         </div>
         <div class="row">
-            <label>ShouldBegin Editing:</label>
+            <label>shouldBeginEditing:</label>
             <input data-montage-id="checkbox" type="checkbox"/>
         </div>
-        <div data-montage-id="didBeginEditingRow" class="row indicator-list">
+        <div data-montage-id="didBeginEditingRow" class="row">
             <label>didBeginEditing:</label>
-            <div class="indicator"></div>
+            <div class="WithDelegate-indicator"></div>
         </div>
-        <div data-montage-id="didEndEditingRow" class="row indicator-list">
+        <div data-montage-id="didEndEditingRow" class="row">
             <label>didEndEditing:</label>
-            <div class="indicator"></div>
+            <div class="WithDelegate-indicator"></div>
         </div>
     </div>
 </body>
