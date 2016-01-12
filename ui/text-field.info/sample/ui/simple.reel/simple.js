@@ -20,7 +20,11 @@ exports.Simple = Component.specialize(/** @lends Simple# */ {
 
     handleAction: {
         value: function () {
-            this.templateObjects.textField.value = this.configData ? this.configData.default : "";
+            var date = new Date(),
+                minutes = date.getMinutes(),
+                second = date.getSeconds();
+
+            this.templateObjects.textField.value = date.getHours() + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (second < 10 ? "0" : "") + second;
         }
     }
 });
