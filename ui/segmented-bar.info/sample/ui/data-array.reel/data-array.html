@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="data-array.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "segmentedBar": {
+            "prototype": "montage/ui/segmented-bar.reel",
+            "properties": {
+                "element": {"#": "segmentedBar"}
+            },
+            "bindings": {
+                "data": {"<-": "@owner.data"}
+            }
+        },
+        "segment": {
+            "prototype": "montage/ui/segment.reel",
+            "properties": {
+                "element": {"#": "segment"}
+            },
+            "bindings": {
+                "label": {"<-": "@segmentedBar:segment.object.region"},
+                "length": {"<-": "@segmentedBar:segment.object.size"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="DataArray">
+        <div data-montage-id="segmentedBar">
+            <div data-montage-id="segment"></div>
+        </div>
+    </div>
+</body>
+</html>
