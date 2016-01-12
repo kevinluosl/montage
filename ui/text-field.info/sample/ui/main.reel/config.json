@@ -9,6 +9,10 @@
         {
             "label": "With Delegate",
             "arg": "with-delegate"
+        },
+        {
+            "label": "With Convert",
+            "arg": "with-convert"
         }
     ]
 }

@@ -14,9 +14,9 @@ exports.Main = Component.specialize({
         }
     },
 
-    templateDidLoad:{
-        value:function(){
-            this.templateObjects.cases.selection =  [this.configuration.cases[0]];
+    templateDidLoad: {
+        value: function () {
+            this.templateObjects.cases.selection = [this.configuration.cases[0]];
         }
     }
 

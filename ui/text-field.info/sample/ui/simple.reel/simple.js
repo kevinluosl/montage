@@ -14,13 +14,13 @@ exports.Simple = Component.specialize(/** @lends Simple# */ {
         }
     },
 
-    configData:{
-        value:undefined
+    configData: {
+        value: undefined
     },
 
-    handleAction:{
-        value:function(){
-           this.templateObjects.textField.value = this.configData?this.configData.default:"";
+    handleAction: {
+        value: function () {
+            this.templateObjects.textField.value = this.configData ? this.configData.default : "";
         }
     }
 });

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="with-convert.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "textField1": {
+            "prototype": "montage/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"}
+            }
+        },
+
+        "textField2": {
+            "prototype": "montage/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField2"}
+            },
+            "bindings": {
+                "value": {"<-": "@textField1.value"},
+                "converter": {"<-": "@owner"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="WithConvert">
+        <div class="row">
+            <label>Text Field 1:</label>
+            <input data-montage-id="textField"/>
+        </div>
+        <div class="row">
+            <label>Text Field 2:</label>
+            <input data-montage-id="textField2"/>
+        </div>
+        <div class="row">
+            <label>Convert function:</label>
+            <pre>
+            <code>
+               convert:{
+                     value:function(value){
+                             return value?value.toUpperCase():"";
+                         }
+                }
+            </code>
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

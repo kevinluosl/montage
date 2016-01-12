@@ -14,24 +14,24 @@ exports.WithDelegate = Component.specialize(/** @lends WithDelegate# */ {
         }
     },
 
-    status:{
-        value:undefined
+    status: {
+        value: undefined
     },
 
-    shouldBeginEditing:{
-        value:function(){
+    shouldBeginEditing: {
+        value: function () {
             return this.templateObjects.checkbox.checked;
         }
     },
 
-    didBeginEditing:{
-        value:function(){
+    didBeginEditing: {
+        value: function () {
             this.status = "didBeginEditing";
         }
     },
 
-    didEndEditing:{
-        value:function(){
+    didEndEditing: {
+        value: function () {
             this.status = "didEndEditing";
         }
     }
