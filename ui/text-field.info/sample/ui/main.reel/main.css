@@ -7,7 +7,7 @@ html, body {
     color: #555;
 }
 
-.MontageSample {
+.Main {
     display: -webkit-flex;
     display: flex;
     -webkit-flex: 1;
@@ -19,7 +19,7 @@ html, body {
     height: 100%;
 }
 
-.MontageSample-cases {
+.Main-cases {
     display: -webkit-flex;
     display: flex;
     height: 60px;
@@ -27,7 +27,7 @@ html, body {
     border-bottom: 1px solid #DDD;
 }
 
-.MontageSample-case {
+.Main-case {
     display: -webkit-flex;
     display: flex;
     padding: 8px;
@@ -49,23 +49,23 @@ html, body {
     user-select: none;
 }
 
-.MontageSample-case.selected {
+.Main-case.selected {
     color: #43b5de;
 }
 
-.MontageSample-case.active {
+.Main-case.active {
     opacity: .7;
 }
 
-.MontageSample-case:hover {
+.Main-case:hover {
     cursor: pointer;
 }
 
-.MontageSample-label {
+.Main-label {
     text-align: center;
 }
 
-.MontageSample-substitution {
+.Main-substitution {
     display: -webkit-flex;
     display: flex;
     flex: 1;
@@ -75,4 +75,20 @@ html, body {
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;
+}
+
+.Main .row
+{
+    padding:10px;
+}
+.Main .row label
+{
+    font-weight: 600;
+    padding-right: 5px;
+}
+.Main  input{
+
+    font-size: 20px;
+    width:300px;
+    padding:5px;
 }

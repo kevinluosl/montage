@@ -1,21 +1,6 @@
 .Simple {
 
 }
-.Simple .row
-{
-    padding:10px;
-}
-.Simple .row label
-{
-    font-weight: 600;
-    padding-right: 5px;
-}
-.Simple  input{
-
-    font-size: 20px;
-    width:300px;
-    padding:5px;
-}
 .Simple  .outValue
 {
     text-decoration: underline;

@@ -1,20 +1,6 @@
 .WithConvert {
 
 }
-.WithConvert .row
-{
-    padding:10px;
-}
-.WithConvert .row label
-{
-    font-weight: 600;
-    padding-right: 5px;
-}
-.WithConvert  input{
-    font-size: 20px;
-    width:300px;
-    padding:5px;
-}
 .WithConvert pre
 {
     background-color: #f5f5f5;
