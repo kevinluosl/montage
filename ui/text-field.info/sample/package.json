@@ -1,5 +1,5 @@
 {
-    "name": "textField-sample",
+    "name": "press-composer-sample",
     "version": "0.0.1",
     "dependencies": {
         "montage": "*"
