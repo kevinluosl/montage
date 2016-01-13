@@ -21,11 +21,21 @@
                 "listener": {"@": "owner"}
             }]
          },
-
+        "checkbox": {
+            "prototype": "montage/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true
+            }
+        },
         "textField": {
             "prototype": "montage/ui/text-field.reel",
             "properties": {
-                "element": {"#": "textField"}
+                "element": {"#": "textField"},
+                "placeholder":"Please input your content here"
+            },
+            "bindings": {
+                "enabled": {"<-": "@checkbox.checked"}
             }
         },
 
@@ -44,12 +54,16 @@
 <body>
     <div data-montage-id="owner" class="Simple">
         <div class="row">
-            <label>Action:</label>
+            <label>Set Value:</label>
             <button data-montage-id="button"></button>
         </div>
         <div class="row">
+            <label>Enable:</label>
+            <input data-montage-id="checkbox" type="checkbox"/>
+        </div>
+        <div class="row">
             <label>Text Field:</label>
-            <input data-montage-id="textField"/>
+            <input data-montage-id="textField" type="text"/>
         </div>
         <div class="row">
             <label>Out Value:</label>

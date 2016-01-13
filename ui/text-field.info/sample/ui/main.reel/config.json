@@ -7,11 +7,11 @@
             "default":"Hello World!"
         },
         {
-            "label": "With Delegate",
+            "label": "Delegate",
             "arg": "with-delegate"
         },
         {
-            "label": "With Convert",
+            "label": "Convert",
             "arg": "with-convert"
         }
     ]

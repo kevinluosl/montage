@@ -92,3 +92,7 @@ html, body {
     width:300px;
     padding:5px;
 }
+.Main  input[type=checkbox]
+{
+    width:30px;
+}
