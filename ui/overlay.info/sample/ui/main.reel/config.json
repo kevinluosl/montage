@@ -1,0 +1,12 @@
+{
+    "cases": [
+        {
+            "label": "simple",
+            "arg": "simple"
+        },
+        {
+            "label": "anchor",
+            "arg": "anchor"
+        }
+    ]
+}
