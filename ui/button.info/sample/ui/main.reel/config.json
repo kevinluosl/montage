@@ -1,0 +1,20 @@
+{
+    "cases": [
+        {
+            "label": "simple",
+            "arg": "simple"
+        },
+        {
+            "label": "Input Button",
+            "arg": "input_button"
+        },
+        {
+            "label": "Long Action",
+            "arg": "long_action"
+        },
+        {
+            "label": "With Data",
+            "arg": "with_data"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="long-action.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "button": {
+            "prototype": "montage/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "label":"Click Me"
+            },
+            "listeners": [{
+                "type": "action",
+                "listener": {"@": "owner"}
+            }]
+        },
+
+        "text": {
+            "prototype": "montage/ui/label.reel",
+            "properties": {
+                "element": {"#": "text"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="LongAction">
+        <div class="row">
+            <p class="help">Press down without up, after a period time longAction event trigger.</p>
+        </div>
+        <div class="row">
+            <button data-montage-id="button" ></button>
+        </div>
+        <div class="row">
+            <div><span  data-montage-id="text"  class="Simple-text"></span></div>
+        </div>
+    </div>
+</body>
+</html>
