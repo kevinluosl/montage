@@ -9,11 +9,11 @@
     -moz-user-select: none;
     -ms-user-select: none
     user-select: none;
-    background-color: gray;
+    background-color: #808080;
     color: lightgray;
 }
 .Simple-indicator--checked
 {
-    background-color: green;
+    background-color: #008000;
     color: white;
 }

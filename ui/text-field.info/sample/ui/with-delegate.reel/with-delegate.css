@@ -4,15 +4,20 @@
 .WithDelegate-indicator
 {
     display: inline-block;
+    width:300px;
+
+}
+.WithDelegate--indicatorActive > div > div
+{
     width: 300px;
-    height: 18px;
+    height: 12px;
     background-color: white;
 }
-.WithDelegate--indicatorActive
+.WithDelegate--indicatorActive > div > div
 {
     background-color: lightgray;
 }
-.WithDelegate--indicatorActive .WithDelegate-indicator
+.WithDelegate--indicatorActive .WithDelegate-indicator >div
 {
     background-color: green;
     animation-name: withDelegate_indicatorActive;

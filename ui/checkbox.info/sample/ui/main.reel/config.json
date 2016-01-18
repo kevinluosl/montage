@@ -5,20 +5,12 @@
             "arg": "simple",
             "captions": [
                 {
-                    "color": "DDD",
-                    "label": "inactive"
+                    "color": "008000",
+                    "label": "checked"
                 },
                 {
-                    "color": "f1e33f",
-                    "label": "active"
-                },
-                {
-                    "color": "2ecc71",
-                    "label": "pressed"
-                },
-                {
-                    "color": "e74c3c",
-                    "label": "cancel"
+                    "color": "808080",
+                    "label": "unchecked"
                 }
             ]
         }
