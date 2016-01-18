@@ -10,6 +10,7 @@
                 "element": {"#": "owner"}
             }
         },
+
         "textField": {
             "prototype": "montage/ui/text-field.reel",
             "properties": {
@@ -19,6 +20,7 @@
                 "delegate": {"<-": "@owner"}
             }
         },
+
         "checkbox": {
             "prototype": "montage/ui/checkbox.reel",
             "properties": {
@@ -26,6 +28,7 @@
                 "checked":true
             }
         },
+
         "didBeginEditingRow": {
             "prototype": "montage/ui/component",
             "properties": {
@@ -36,6 +39,7 @@
                  "classList.has('WithDelegate--indicatorActive')": {"<-": "@checkbox.checked && @owner.status == 'didBeginEditing'"}
             }
         },
+
         "didEndEditingRow": {
             "prototype": "montage/ui/component",
             "properties": {
