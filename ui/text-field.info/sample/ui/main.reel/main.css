@@ -68,6 +68,8 @@ html, body {
 .Main-substitution {
     display: -webkit-flex;
     display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     -webkit-justify-content: center;
     -ms-justify-content: center;
@@ -85,6 +87,10 @@ html, body {
 {
     font-weight: 600;
     padding-right: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+user-select: none;
 }
 .Main  input{
 
@@ -95,4 +101,10 @@ html, body {
 .Main  input[type=checkbox]
 {
     width:30px;
+}
+.Main .Captions {
+    display: -webkit-flex;
+    display: flex;
+    flex: 1;
+    border-top: 1px solid #DDD;
 }
