@@ -1,0 +1,19 @@
+.Simple {
+
+}
+.Simple-indicator
+{
+    display: inline-block;
+    padding: 5px 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+    user-select: none;
+    background-color: gray;
+    color: lightgray;
+}
+.Simple-indicator--checked
+{
+    background-color: green;
+    color: white;
+}
