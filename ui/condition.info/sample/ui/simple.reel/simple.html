@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="simple.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "checkbox": {
+            "prototype": "montage/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked":true
+            }
+        },
+        "condition": {
+            "prototype": "montage/ui/condition.reel",
+            "hasTemplate":false,
+            "properties": {
+                "element": {"#": "condition"}
+            },
+            "bindings": {
+                "condition": {"<-": "@checkbox.checked "}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Simple">
+        <div class="row">
+            <label>Toggle view:</label>
+            <input data-montage-id="checkbox" type="checkbox"/>
+        </div>
+        <div class="row">
+                <div data-montage-id="condition" class="Simple-condition">
+                    <p>At Montage Studio, open source software is at the heart of everything that we build. We created the MontageJS HTML5 framework to change the way developers and designers build software together. </p>
+                </div>
+         </div>
+    </div>
+</body>
+</html>

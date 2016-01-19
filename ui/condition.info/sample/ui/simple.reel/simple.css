@@ -1,0 +1,14 @@
+.Simple {
+
+}
+.Simple-condition
+{
+    position: absolute;
+    left: 100px;
+    right: 100px;
+}
+.Simple-condition p
+{
+    background-color: #dddddd;
+    padding: 10px;
+}

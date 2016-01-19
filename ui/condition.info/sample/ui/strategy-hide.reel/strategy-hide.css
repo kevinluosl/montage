@@ -1,0 +1,18 @@
+.StrategyHide {
+
+}
+.StrategyHide-condition
+{
+    position: absolute;
+    left: 100px;
+    right: 100px;
+}
+.StrategyHide-condition p
+{
+    background-color: #dddddd;
+    padding: 10px;
+}
+.StrategyHide-condition.montage-invisible
+{
+    opacity: 0.2;
+}
