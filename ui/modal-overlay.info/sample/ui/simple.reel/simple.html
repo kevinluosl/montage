@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="simple.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "button": {
+            "prototype": "montage/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "label":"Show Over Layer!"
+            },
+            "listeners": [{
+                "type": "action",
+                "listener": {"@": "owner"}
+            }]
+        },
+
+        "overlay": {
+            "prototype": "montage/ui/modal-overlay.reel",
+            "properties": {
+                "element": {"#": "overlay"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Simple">
+        <div class="row">
+           <button data-montage-id="button"></button>
+        </div>
+        <div data-montage-id="overlay">
+            <p>Content in Over layer! click <strong>ESC</strong> to close layer view!</p>
+        </div>
+    </div>
+</body>
+</html>
